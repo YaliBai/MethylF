@@ -118,23 +118,32 @@ High-throughtput scTAPS
                              [--Tn5_min_dis TN5_MIN_DIS] [--prefix PREFIX]
 
 The code is used to seperate reads by different cell barcode. Update in
-2019.07.01 by Bailey. Copyright (c) Bailey
+2019.11.10 by Bailey. Copyright (c) Bailey
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -R1 READ1_FASTQ, --Read1_fastq READ1_FASTQ
+>optional arguments:
+
+>  -h, --help            show this help message and exit
+
+>  -R1 READ1_FASTQ, --Read1_fastq READ1_FASTQ
                         Read1 fastq file path.
-  -R2 READ2_FASTQ, --Read2_fastq READ2_FASTQ
+                        
+>  -R2 READ2_FASTQ, --Read2_fastq READ2_FASTQ
                         Read2 fastq file path.
-  -b BARCODE_SEQ_FILE, --barcode_seq_file BARCODE_SEQ_FILE
+                        
+>  -b BARCODE_SEQ_FILE, --barcode_seq_file BARCODE_SEQ_FILE
                         barcode seq ref file: barcode_id barcode_seq.
-  -o OUTDIR, --outdir OUTDIR
+                        
+>  -o OUTDIR, --outdir OUTDIR
                         The outdir of output files
-  --min_dis MIN_DIS     min dist of (index+barcode seq) and seq (Default 3).
-  --Tn5 TN5             The Tn5 seq after barcode(Default
+                        
+>  --min_dis MIN_DIS     min dist of (index+barcode seq) and seq (Default 3).
+  
+>  --Tn5 TN5             The Tn5 seq after barcode(Default
                         AGATGTGTATAAGAGACAG)..
-  --Tn5_min_dis TN5_MIN_DIS
+                        
+>  --Tn5_min_dis TN5_MIN_DIS
                         min dist of Tn5.
-  --prefix PREFIX       The out name
+                        
+>  --prefix PREFIX       The out name
 
 
