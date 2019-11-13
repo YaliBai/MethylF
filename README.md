@@ -1,10 +1,10 @@
 # code for scTAPS
 
-#scTAPS
+scTAPS
 
 
 
-#High-throughtput scTAPS
+High-throughtput scTAPS
 
 
 
