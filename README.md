@@ -9,13 +9,13 @@ scTAPS
 >Inspecting and pre-processing inputs
 >>usage: main.py [-h] 
 
->>                -i INPUT_BAM -o OUTPUT_DIR [-p PREFIX] -r REFERENCE
->>               [-l {directional,non-directional}] [-c {All,CpG,CHH,CHG}]
->>               [-m {mCtoT,CtoT}] [-k] [-bq MINBQ] [-mq MINMQ]
->>               [--ignore_orphans] [--ignore_wrong_insert] [--Dip_C]
->>               [--clip_5_end CLIP_5_END] [--clip_3_end CLIP_3_END]
->>               [--read_len READ_LEN] [--compress COMPRESS]
->>               [--N_threads THREADS]
+                -i INPUT_BAM -o OUTPUT_DIR [-p PREFIX] -r REFERENCE
+               [-l {directional,non-directional}] [-c {All,CpG,CHH,CHG}]
+               [-m {mCtoT,CtoT}] [-k] [-bq MINBQ] [-mq MINMQ]
+               [--ignore_orphans] [--ignore_wrong_insert] [--Dip_C]
+               [--clip_5_end CLIP_5_END] [--clip_3_end CLIP_3_END]
+               [--read_len READ_LEN] [--compress COMPRESS]
+               [--N_threads THREADS]
 
 >>The code to call the modifications in the bam/sam reads. Update in 2019.06.11
 by Bailey.
@@ -107,3 +107,34 @@ High-throughtput scTAPS
 
 
 >sep barcode first
+
+>python sep_scripts/Tn5.barcode.find.8.py -h
+
+>usage: Tn5.barcode.find.8.py [-h] 
+
+                             [-R1 READ1_FASTQ] [-R2 READ2_FASTQ]
+                             [-b BARCODE_SEQ_FILE] [-o OUTDIR]
+                             [--min_dis MIN_DIS] [--Tn5 TN5]
+                             [--Tn5_min_dis TN5_MIN_DIS] [--prefix PREFIX]
+
+The code is used to seperate reads by different cell barcode. Update in
+2019.07.01 by Bailey. Copyright (c) Bailey
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -R1 READ1_FASTQ, --Read1_fastq READ1_FASTQ
+                        Read1 fastq file path.
+  -R2 READ2_FASTQ, --Read2_fastq READ2_FASTQ
+                        Read2 fastq file path.
+  -b BARCODE_SEQ_FILE, --barcode_seq_file BARCODE_SEQ_FILE
+                        barcode seq ref file: barcode_id barcode_seq.
+  -o OUTDIR, --outdir OUTDIR
+                        The outdir of output files
+  --min_dis MIN_DIS     min dist of (index+barcode seq) and seq (Default 3).
+  --Tn5 TN5             The Tn5 seq after barcode(Default
+                        AGATGTGTATAAGAGACAG)..
+  --Tn5_min_dis TN5_MIN_DIS
+                        min dist of Tn5.
+  --prefix PREFIX       The out name
+
+
