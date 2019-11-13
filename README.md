@@ -1,9 +1,11 @@
 # code for scTAPS
 
-scTAPS
-
-High-throughtput scTAPS
+#scTAPS
 
 
 
-sep barcode first
+#High-throughtput scTAPS
+
+
+
+>sep barcode first
